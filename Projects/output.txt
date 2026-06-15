@@ -1,0 +1,77 @@
+Tokens:
+
+( : SYMBOL
+3 : NUMBER
++ : SYMBOL
+a : IDENTIFIER
+* : SYMBOL
+( : SYMBOL
+b : IDENTIFIER
+- : SYMBOL
+2 : NUMBER
+/ : SYMBOL
+( : SYMBOL
+c : IDENTIFIER
++ : SYMBOL
+d : IDENTIFIER
+* : SYMBOL
+( : SYMBOL
+e : IDENTIFIER
+- : SYMBOL
+4 : NUMBER
+) : SYMBOL
+) : SYMBOL
+) : SYMBOL
+- : SYMBOL
+5 : NUMBER
+) : SYMBOL
+* : SYMBOL
+( : SYMBOL
+x : IDENTIFIER
+/ : SYMBOL
+( : SYMBOL
+y : IDENTIFIER
+- : SYMBOL
+7 : NUMBER
+) : SYMBOL
++ : SYMBOL
+z : IDENTIFIER
+* : SYMBOL
+( : SYMBOL
+1 : NUMBER
++ : SYMBOL
+w : IDENTIFIER
+) : SYMBOL
+) : SYMBOL
+
+AST:
+
+* : SYMBOL
+  + : SYMBOL
+    3 : NUMBER
+    - : SYMBOL
+      * : SYMBOL
+        a : IDENTIFIER
+        - : SYMBOL
+          b : IDENTIFIER
+          / : SYMBOL
+            2 : NUMBER
+            + : SYMBOL
+              c : IDENTIFIER
+              * : SYMBOL
+                d : IDENTIFIER
+                - : SYMBOL
+                  e : IDENTIFIER
+                  4 : NUMBER
+      5 : NUMBER
+  + : SYMBOL
+    / : SYMBOL
+      x : IDENTIFIER
+      - : SYMBOL
+        y : IDENTIFIER
+        7 : NUMBER
+    * : SYMBOL
+      z : IDENTIFIER
+      + : SYMBOL
+        1 : NUMBER
+        w : IDENTIFIER

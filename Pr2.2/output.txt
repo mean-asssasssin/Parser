@@ -1,0 +1,170 @@
+Tokens:
+IDENTIFIER x
+SYMBOL :=
+NUMBER 5
+SYMBOL +
+NUMBER 3
+SYMBOL *
+NUMBER 2
+SYMBOL ;
+IDENTIFIER y
+SYMBOL :=
+IDENTIFIER x
+SYMBOL -
+NUMBER 4
+SYMBOL /
+NUMBER 2
+SYMBOL ;
+IDENTIFIER z
+SYMBOL :=
+IDENTIFIER x
+SYMBOL +
+IDENTIFIER y
+SYMBOL ;
+KEYWORD if
+IDENTIFIER x
+SYMBOL -
+IDENTIFIER y
+KEYWORD then
+IDENTIFIER a
+SYMBOL :=
+IDENTIFIER z
+SYMBOL *
+NUMBER 2
+SYMBOL ;
+KEYWORD if
+IDENTIFIER a
+SYMBOL -
+NUMBER 10
+KEYWORD then
+KEYWORD skip
+KEYWORD else
+IDENTIFIER b
+SYMBOL :=
+IDENTIFIER a
+SYMBOL /
+NUMBER 2
+SYMBOL +
+IDENTIFIER x
+KEYWORD endif
+KEYWORD else
+IDENTIFIER y
+SYMBOL :=
+IDENTIFIER y
+SYMBOL +
+NUMBER 1
+KEYWORD endif
+SYMBOL ;
+KEYWORD while
+IDENTIFIER y
+SYMBOL -
+NUMBER 10
+KEYWORD do
+IDENTIFIER x
+SYMBOL :=
+IDENTIFIER x
+SYMBOL +
+NUMBER 1
+SYMBOL ;
+KEYWORD if
+IDENTIFIER x
+SYMBOL -
+NUMBER 15
+KEYWORD then
+IDENTIFIER z
+SYMBOL :=
+IDENTIFIER z
+SYMBOL +
+NUMBER 1
+KEYWORD else
+KEYWORD skip
+KEYWORD endif
+KEYWORD endwhile
+SYMBOL ;
+IDENTIFIER t
+SYMBOL :=
+IDENTIFIER x
+SYMBOL +
+IDENTIFIER y
+SYMBOL -
+IDENTIFIER z
+
+AST:
+SYMBOL ;
+  SYMBOL ;
+    SYMBOL ;
+      SYMBOL ;
+        SYMBOL ;
+          SYMBOL :=
+            IDENTIFIER x
+            SYMBOL +
+              NUMBER 5
+              SYMBOL *
+                NUMBER 3
+                NUMBER 2
+          SYMBOL :=
+            IDENTIFIER y
+            SYMBOL -
+              IDENTIFIER x
+              SYMBOL /
+                NUMBER 4
+                NUMBER 2
+        SYMBOL :=
+          IDENTIFIER z
+          SYMBOL +
+            IDENTIFIER x
+            IDENTIFIER y
+      IF-STATEMENT
+        SYMBOL -
+          IDENTIFIER x
+          IDENTIFIER y
+        SYMBOL ;
+          SYMBOL :=
+            IDENTIFIER a
+            SYMBOL *
+              IDENTIFIER z
+              NUMBER 2
+          IF-STATEMENT
+            SYMBOL -
+              IDENTIFIER a
+              NUMBER 10
+            KEYWORD skip
+            SYMBOL :=
+              IDENTIFIER b
+              SYMBOL +
+                SYMBOL /
+                  IDENTIFIER a
+                  NUMBER 2
+                IDENTIFIER x
+        SYMBOL :=
+          IDENTIFIER y
+          SYMBOL +
+            IDENTIFIER y
+            NUMBER 1
+    WHILE-LOOP
+      SYMBOL -
+        IDENTIFIER y
+        NUMBER 10
+      SYMBOL ;
+        SYMBOL :=
+          IDENTIFIER x
+          SYMBOL +
+            IDENTIFIER x
+            NUMBER 1
+        IF-STATEMENT
+          SYMBOL -
+            IDENTIFIER x
+            NUMBER 15
+          SYMBOL :=
+            IDENTIFIER z
+            SYMBOL +
+              IDENTIFIER z
+              NUMBER 1
+          KEYWORD skip
+  SYMBOL :=
+    IDENTIFIER t
+    SYMBOL +
+      IDENTIFIER x
+      SYMBOL -
+        IDENTIFIER y
+        IDENTIFIER z

@@ -1,0 +1,99 @@
+Tokens:
+
+12 : NUMBER
+* : SYMBOL
+( : SYMBOL
+3 : NUMBER
++ : SYMBOL
+4 : NUMBER
+/ : SYMBOL
+2 : NUMBER
+- : SYMBOL
+5 : NUMBER
+) : SYMBOL
++ : SYMBOL
+100 : NUMBER
+/ : SYMBOL
+( : SYMBOL
+3 : NUMBER
+* : SYMBOL
+2 : NUMBER
+) : SYMBOL
+- : SYMBOL
+( : SYMBOL
+7 : NUMBER
+- : SYMBOL
+10 : NUMBER
+/ : SYMBOL
+3 : NUMBER
+* : SYMBOL
+2 : NUMBER
+) : SYMBOL
++ : SYMBOL
+8 : NUMBER
+* : SYMBOL
+( : SYMBOL
+2 : NUMBER
++ : SYMBOL
+3 : NUMBER
+* : SYMBOL
+( : SYMBOL
+4 : NUMBER
+- : SYMBOL
+1 : NUMBER
+) : SYMBOL
+) : SYMBOL
+
+AST:
+
++ : SYMBOL
+  + : SYMBOL
+    * : SYMBOL
+      12 : NUMBER
+
+      + : SYMBOL
+        3 : NUMBER
+
+        - : SYMBOL
+          / : SYMBOL
+            4 : NUMBER
+
+            2 : NUMBER
+
+          5 : NUMBER
+
+    - : SYMBOL
+      / : SYMBOL
+        100 : NUMBER
+
+        * : SYMBOL
+          3 : NUMBER
+
+          2 : NUMBER
+
+      - : SYMBOL
+        7 : NUMBER
+
+        / : SYMBOL
+          10 : NUMBER
+
+          * : SYMBOL
+            3 : NUMBER
+
+            2 : NUMBER
+
+  * : SYMBOL
+    8 : NUMBER
+
+    + : SYMBOL
+      2 : NUMBER
+
+      * : SYMBOL
+        3 : NUMBER
+
+        - : SYMBOL
+          4 : NUMBER
+
+          1 : NUMBER
+
+Output: 134
